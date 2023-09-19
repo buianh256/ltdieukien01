@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<h1>Nhập tuổi và in ra kết quả </h1>
+<input type="number" id="age"></input>
+<button onclick="ketqua()" >Click</button>
+<p id="btn"></p>
+<script>
+  function ketqua(){
+    let age = +document.getElementById("age").value;
+    if(age < 15){
+      document.getElementById("btn").innerHTML = "Không đủ điều kiện học lớp 10";
+    }else{
+      document.getElementById("btn").innerHTML = "Được học lớp 10";
+    }
+  }
+</script>
+</body>
+</html>

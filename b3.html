@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<h1>Nhập số nguyên bất kì  </h1>
+<input type="number" id="number"></input>
+<button onclick="ketqua()" >Click</button>
+<p id="btn"></p>
+<script>
+    function ketqua() {
+        let number = +document.getElementById("number").value;
+        if (number > 0) {
+            document.getElementById("btn").innerHTML = "Số nguyên đó lớn hơn không"
+            }else{
+                document.getElementById("btn").innerHTML ="Số nguyên đó nhỏ hơn không"
+            }
+        }
+
+</script>
+</body>
+</html>

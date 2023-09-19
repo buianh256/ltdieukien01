@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6 </title>
+</head>
+<body>
+<h1>Nhập số tiền bán được để nhận số hoa hồng </h1>
+<input type="number" placeholder="Nhập tiền" id="doanhso"></input>
+<button onclick="ketqua()" >Kết quả</button>
+<p id="result"></p>
+<script>
+    function ketqua() {
+        let doanhso = +document.getElementById("doanhso").value;
+        if (doanhso <= 2000000){
+            document.getElementById("result").innerHTML = "Nhận số hoa hồng " + doanhso * 0.03+ " VNĐ";
+    }else if(doanhso <= 5000000) {
+        document.getElementById("result").innerHTML = "Nhận số hoa hồng " + ((2000000 * 0.03) + ((doanhso - 2000000) * 0.05)) + " VNĐ";
+    }else
+        document.getElementById('result').innerHTML = "Nhận sô hoa hồng " + ((2000000 * 0.03) + (3000000 * 0.05) + ((doanhso -5000000) * 0.1)) + " VNĐ";
+    }
+</script>
+</body>
+</html>

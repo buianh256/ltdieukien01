@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<h1>Nhập 3 số nguyên bất kì  </h1>
+<input type="number" id="number1"></input>
+<input type="number" id="number2"></input>
+<input type="number" id="number3"></input>
+<button onclick="ketqua()" >Click</button>
+<p id="result"></p>
+</body>
+<script>
+    function ketqua() {
+        var number1 = +document.getElementById("number1").value;
+        var number2 = +document.getElementById("number2").value;
+        var number3 = +document.getElementById("number3").value;
+        if(number1 > number2 && number1 > number3) {
+            document.getElementById("result").innerHTML = + number1 + " Là số lớn nhất";
+        }else if( number2 > number3) {
+            document.getElementById("result").innerHTML = + number2 + " Là số lớn nhất";
+            }else {
+            document.getElementById("btn").innerHTML = +number3 + " Là số lớn nhất"
+        }
+
+    }
+</script>
+</html>

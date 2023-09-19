@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<h1>Nhập điểm thi giữa kì và cuối kì  </h1>
+<input type="number" placeholder="Nhập điểm giữa kì" id="number1"></input>
+<input type="number" placeholder="Nhập điểm cuối kì" id="number2"></input>
+<button onclick="ketqua()" >Click</button>
+<p id="result"></p>
+<script>
+  function ketqua() {
+    const number1 = +document.getElementById("number1").value;
+    const number2 = +document.getElementById("number2").value;
+    const tongg = (number1 * 2 + number2 * 3) / 5;
+    if (tongg >= 8) {
+      document.getElementById("result").innerHTML = "Bạn đã đạt học sinh giỏi";
+    } else if (tongg >= 6.5 && tongg <8) {
+      document.getElementById("result").innerHTML = "Bạn đã đạt học sinh khá ";
+    }else {
+      document.getElementById("result").innerHTML = "Bạn đạt học sinh trung bình";
+    }
+  }
+</script>
+</body>
+</html>

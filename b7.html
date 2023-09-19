@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<h1>Số cước điện thoại của bạn</h1>
+<input type="number" placeholder="Nhập số phút gọi đt"  id="sophut"/>
+<button onclick="ketqua()">Kết quả</button>
+<p id="result"></p>
+<script>
+    function ketqua() {
+        var sophut = document.getElementById("sophut").value;
+       if(sophut > 200){
+           document.getElementById("result").innerHTML = "Số cước điện thoại của bạn là " + (25000+(sophut - 200)*200+150*400+50*600) + " VNĐ";
+       }else if(sophut > 50) {
+           document.getElementById("result").innerHTML = "Số cước điện thoại của bạn là " + (25000+(sophut - 50)*400+50*600) + " VNĐ";
+       }else {
+           document.getElementById("result").innerHTML = "Số cước điện thoại của bạn là " + (25000+sophut*600) + " VNĐ";
+       }
+    }
+</script>
+</body>
+</html>
